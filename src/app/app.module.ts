@@ -7,11 +7,11 @@ import { HelloComponent } from './hello.component';
 import { summary } from './summary.pipe';
 import { LifeCycleComponent } from './life-cycle/life-cycle.component';
 import { ChildComponent } from './child-lifecycle/child-lifecycle.component';
-import { AfterContentInitC } from './ngaftercontentInit/ngaftercontentinit.component';
+
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent ,summary,LifeCycleComponent,ChildComponent, AfterContentInitC],
+  declarations: [ AppComponent, HelloComponent ,summary,LifeCycleComponent,ChildComponent],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
