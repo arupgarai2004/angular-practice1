@@ -1,4 +1,4 @@
-import { Component, OnInit, SimpleChanges } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-life-cycle',
@@ -6,13 +6,12 @@ import { Component, OnInit, SimpleChanges } from '@angular/core';
   styleUrls: ['./life-cycle.component.css'],
 })
 export class LifeCycleComponent implements OnInit {
-  user = {
-    name: 'Alex',
-  };
+  
+  parentData=0;
+
   constructor() {}
   ngOnInit() {}
-  updateUser() {
-    this.user.name = 'ted';
+  updateUser() {   
+    this.parentData+=1;    
   }
-  
 }
