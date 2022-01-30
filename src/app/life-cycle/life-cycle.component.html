@@ -1,5 +1,6 @@
 <p>
-  <a href="#" (click)="updateUser()" >Update</a><br />
-   <app-child  [parentData]="parentData" ></app-child>
-  {{parentData}}
+  <a href="#" (click)="update()">Update</a><br />
+  <a href="#" (click)="updateUser()">updateUser</a><br />
+  <app-child [parentData]="parentData" [user]="user"></app-child>
+  {{ parentData }}
 </p>

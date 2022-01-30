@@ -10,27 +10,28 @@ import {
 } from '@angular/core';
 @Component({
   selector: 'app-child',
-  template: `Here is the user name: {{ parentData  }}     
+  template: `Here is the user name:{{user.name}} {{ parentData  }}     
   <button (click)="changeFromChild()">Change from child</button>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ChildComponent implements OnInit, OnChanges {  
+export class ChildComponent implements OnInit, OnChanges, DoCheck {
   @Input() parentData;
+  @Input() user;
   constructor() {}
   ngOnChanges(changes: SimpleChanges) {
-    console.log(' On CHANGES current value', changes.parentData.currentValue);  
-    console.log(' On CHANGES Previous value', changes.parentData.previousValue); 
-    console.log(' On CHANGES First value', changes.parentData.firstChange);     
+    console.log(' On CHANGES current value', changes.parentData.currentValue);
+    console.log(' On CHANGES Previous value', changes.parentData.previousValue);
+    console.log(' On CHANGES First value', changes.parentData.firstChange);
   }
   ngOnInit() {
     console.log('Ng On Init', this.parentData);
   }
 
   ngDoCheck() {
-    console.log('DO CHECK', this.parentData); 
+    console.log('DO CHECK', this.user);
   }
-  changeFromChild() {    
-    this.parentData -= 1;    
+  changeFromChild() {
+    this.parentData -= 1;
   }
 }

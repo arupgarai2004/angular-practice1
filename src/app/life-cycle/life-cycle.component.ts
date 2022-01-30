@@ -6,12 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./life-cycle.component.css'],
 })
 export class LifeCycleComponent implements OnInit {
-  
-  parentData=0;
-
+  user = {
+    name: 'Alex',
+  };
+  parentData = 0;
   constructor() {}
   ngOnInit() {}
-  updateUser() {   
-    this.parentData+=1;    
+  update() {
+    this.parentData += 1;
+  }
+  updateUser() {
+    this.user.name = 'Arup';
   }
 }
