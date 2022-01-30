@@ -18,7 +18,5 @@ export class LifeCycleComponent implements OnInit {
   updateUser() {
     this.user.name = 'Arup';
   }
-  ngAfterContentInit() {
-    console.log('after content init call');
-  }
+  
 }

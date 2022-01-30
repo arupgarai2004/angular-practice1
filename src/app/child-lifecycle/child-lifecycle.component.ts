@@ -31,6 +31,14 @@ export class ChildComponent implements OnInit, OnChanges, DoCheck {
   ngDoCheck() {
     console.log('DO CHECK', this.user);
   }
+
+  ngAfterContentInit() {
+    console.log('after content init call');
+  }
+  ngAfterContentChecked() {
+    console.log('after content checked');
+  }
+
   changeFromChild() {
     this.parentData -= 1;
   }
