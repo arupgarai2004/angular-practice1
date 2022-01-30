@@ -23,10 +23,12 @@ export class ChildComponent implements OnInit, OnChanges {
     console.log(' On CHANGES Previous value', changes.parentData.previousValue); 
     console.log(' On CHANGES First value', changes.parentData.firstChange);     
   }
-  ngOnInit() {}
+  ngOnInit() {
+    console.log('Ng On Init', this.parentData);
+  }
 
   ngDoCheck() {
-    console.log('DO CHECK');
+    console.log('DO CHECK', this.parentData); 
   }
   changeFromChild() {    
     this.parentData -= 1;    
