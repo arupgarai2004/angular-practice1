@@ -4,6 +4,10 @@ import { Component, OnInit, AfterContentInit, DoCheck } from '@angular/core';
   selector: 'app-cont',
   template: `<a href="#" (click)="clickMe()">Click Here</a>`  
 })
+
+//Use ngAfterContentInit to call something once after all of the content has been initialized.
+
+
 export class AfterContentInitC implements OnInit,AfterContentInit {
   constructor() { }
   ngOnInit() {
