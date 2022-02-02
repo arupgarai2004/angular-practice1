@@ -31,12 +31,28 @@ export class ChildComponent implements OnInit, OnChanges, DoCheck {
   ngDoCheck() {
     console.log('DO CHECK', this.user);
   }
-
+  //ngAfterContentInit() is called only once Use ngAfterContentInit to call something once after all of the content has been initialized.
   ngAfterContentInit() {
     console.log('after content init call');
   }
+  //ngAfterContentChecked can be useful if you want to implement additional initialization tasks after Angular has fully initialized the component/directive's content.
   ngAfterContentChecked() {
     console.log('after content checked');
+  }
+
+  //ngAfterViewInit is useful when you want to call a lifecycle hook after all child components have been initialized and checked
+  ngAfterViewInit() {
+    console.log('after view init');
+  }
+
+  //ngAfterViewChecked is useful when you want to call a lifecycle hook after all child components have been initialized and checked.
+  ngAfterViewChecked() {
+    console.log('after view checked');
+  }
+
+  //ngOnDestroy can be helpful when you need to unsubscribe from observables or perform any other clean up when destroying a component.
+  ngOnDestroy() {
+    console.log('destroying child...');
   }
 
   changeFromChild() {
