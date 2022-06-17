@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { forkJoin, merge, of } from 'rxjs';
-import { map, reduce, filter, concat } from 'rxjs/operators';
+import { map, reduce, filter, concat, mergeMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-rxjs-pipe',
@@ -25,7 +25,9 @@ export class RxjsPipeComponent implements OnInit {
 
     let final_valMerge = merge(list1, list2);
     final_valMerge.subscribe(x => console.log("merge=>",x));
-
+    let final_valMergeMap = list1.pipe(mergeMap((val)=>list2 ));
+    final_valMergeMap.subscribe(x => console.log("mergeMap=>",x));
+    
 
   }
 }
