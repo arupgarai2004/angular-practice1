@@ -47,7 +47,7 @@ export class ChildComponent implements OnInit, OnChanges, DoCheck {
 
   //ngAfterViewChecked is useful when you want to call a lifecycle hook after all child components have been initialized and checked.
   ngAfterViewChecked() {
-    console.log('after view checked');
+       console.log('after view checked');
   }
 
   //ngOnDestroy can be helpful when you need to unsubscribe from observables or perform any other clean up when destroying a component.
