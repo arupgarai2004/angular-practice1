@@ -1,3 +1,3 @@
 # angular-sqcpix
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-sqcpix)
+[We can Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-sqcpix)
